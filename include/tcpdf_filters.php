@@ -356,7 +356,7 @@ class TCPDF_FILTERS {
 		// initialize string to return
 		$decoded = @gzuncompress($data);
 		if ($decoded === false) {
-			self::Error('decodeFilterFlateDecode: invalid code');
+            return 99999;
 		}
 		return $decoded;
 	}
